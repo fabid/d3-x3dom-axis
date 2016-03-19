@@ -6,6 +6,9 @@
 
 If you use NPM, `npm install d3-x3dom-axis`. Otherwise, download the [latest release](https://github.com/d3/d3-x3dom-axis/releases/latest).
 
+## Demo
+
+[Demo on blockbuilder](http://blockbuilder.org/fabid/61cbfe14de686cc25c47)
 
 
 ## API Reference
