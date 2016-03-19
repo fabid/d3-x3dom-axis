@@ -1,0 +1,35 @@
+{
+  "name": "d3-x3dom-axis",
+  "version": "0.0.1",
+  "description": "3d axis for x3dom",
+  "keywords": [
+    "d3",
+    "x3dom",
+    "axis",
+    "scale",
+    "visualization"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-x3dom-axis.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/fabid/d3-x3dom-axis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabid/d3-x3dom-axis.git"
+  },
+  "scripts": {
+    "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/package.js && rollup -g d3-scale:d3_scale -f umd -n d3_x3dom -o build/d3-x3dom-axis.js -- index.js",
+    "test": "faucet `find test -name '*-test.js'`",
+    "prepublish": "npm run test && uglifyjs build/d3-x3dom-axis.js -c -m -o build/d3-x3dom-axis.min.js && rm -f build/d3-x3dom-axis.zip && zip -j build/d3-x3dom-axis.zip -- LICENSE README.md build/d3-x3dom-axis.js build/d3-x3dom-axis.min.js"
+  },
+  "devDependencies": {
+    "faucet": "0.0",
+    "rollup": "0.25",
+    "tape": "4",
+    "uglify-js": "2"
+  },
+  "dependencies": {
+    "d3-scale": "~0.6.0",
+    "d3-selection": "~0.7.0"
+  }
+}
