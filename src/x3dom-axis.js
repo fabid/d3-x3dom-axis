@@ -9,7 +9,7 @@ var makeSolid =  function(selection, color) {
   return selection;
 }
 
-export function x3domAxis(dir, tickDirr, scale) {
+export function x3domAxis(dir, tickDir, scale) {
   var tickArguments = [],
       tickValues = null,
       tickFormat = null,
