@@ -19,7 +19,7 @@
   },
   "scripts": {
     "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/package.js && rollup -g d3-scale:d3_scale,d3-selection:d3_selection -f umd -n d3_x3dom_axis -o build/d3-x3dom-axis.js -- index.js",
-    "test": "faucet `find test -name '*-test.js'`",
+    "test": "tape 'test/**/*-test.js' |faucet && eslint index.js src",
     "prepublish": "npm run test && uglifyjs build/d3-x3dom-axis.js -c -m -o build/d3-x3dom-axis.min.js && rm -f build/d3-x3dom-axis.zip && zip -j build/d3-x3dom-axis.zip -- LICENSE README.md build/d3-x3dom-axis.js build/d3-x3dom-axis.min.js"
   },
   "devDependencies": {
