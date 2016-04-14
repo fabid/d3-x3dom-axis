@@ -2,6 +2,9 @@
 
 [x3dom](http://www.x3dom.org/) version of [d3-axis](https://github.com/d3/d3-axis). Create 3d axes in x3dom along x, y and z directions.
 
+
+[![Build Status](https://travis-ci.org/fabid/d3-x3dom-axis.svg?branch=master)](https://travis-ci.org/fabid/d3-x3dom-axis)
+
 ## Installing
 
 If you use NPM, `npm install d3-x3dom-axis`. Otherwise, download the [latest release](https://github.com/d3/d3-x3dom-axis/releases/latest).
