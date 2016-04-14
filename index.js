@@ -1,5 +1,5 @@
 export {
-  version
+  version,
 } from "./build/package";
 
 export {

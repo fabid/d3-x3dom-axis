@@ -39,7 +39,6 @@ export function x3domAxis(dir, tickDir, scale) {
         result = [0, 0, 1];
         break;
       }
-        break;
       }
       return  result;
     }
@@ -58,7 +57,6 @@ export function x3domAxis(dir, tickDir, scale) {
         result = [0, 1, 1, Math.PI];
         break;
       }
-        break;
       }
       return result;
     }
